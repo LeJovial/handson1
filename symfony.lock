@@ -295,12 +295,6 @@
             "./webpack.config.js"
         ]
     },
-<<<<<<< HEAD
-=======
-    "symfonycasts/verify-email-bundle": {
-        "version": "v1.13.0"
-    },
->>>>>>> antoine
     "twig/extra-bundle": {
         "version": "v3.5.0"
     }
