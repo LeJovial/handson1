@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<title>Own Analysis</title>
+{{ block ("head", "/index.html.twig")}}
+
+{% block body %}
+{{ block ("header", "/user/header.html.twig")}} 
+<main>
+    <div class="text-center">
+        <h1>Welcome in your {{ controller_name }}! ✅</h1>
+
+        <div class="parent d-flex justify-content-around my-4">
+            <div class="child1">
+                <h3>Daily summary of Ros Iliana :</h3>
+                <div><p>Yesterday you consumed X with an average of Y open tabs</p></div>
+                <div><p>The average time on a tab is Z sec/min</p></div>
+                <div><p>Daily energy cost : Epsilon</p></div>
+                <div class="d-flex justify-content-between">
+                    <button type="button" class="">Monthly summary</button>
+                    <button type="button" class="">Annual summary</button>
+                </div>
+            </div>
+            <div class="child2 d-flex justify-content-center">
+                <table class="table table-striped text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">Tab</th>
+                            <th scope="col">Time spent on tab</th>
+                            <th scope="col">Tab open time</th>
+                            <th scope="col">Tab consumption</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>google.com</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>thegoodcorner.fr</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>agar.io</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

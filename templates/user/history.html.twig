@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+{% set var = 0 %}
+{% block body %}
+<table>    
+<tr class="first-line">
+    <td width="100px">Date</td>
+    <td width="400px">Url</td>
+    <td width="80px">Score</td>
+    <td width="80px">Eco Index</td>
+    <td width="10px"></td>
+</tr>
+{% for analyses in A %}
+{% if var == 0 %}
+    <tr class="active" onclick="document.location='{{ path('Analyse', {'id' : A.id} ) }}';">
+    {% set var = 1 %}
+{% else %}
+    <tr class="success" onclick="document.location='{{ path('Analyse', {'id' : A.id} ) }}';">
+    {% set var = 0 %}
+{% endif %}
+    <td>{{A.date}}</td>
+    <td>{{A.url}} </td>
+    <td>{{A.score}} </td>
+    <td>{{A.eco}} </td>
+    <td>      
+        <a href="{{ path('suppranalyse', {'id' : A.id} ) }}" 
+               title="Supprimer l'analyse {{ A.id }}" class="btn btn-default btn-danger btn-xs tooltip">
+        <span class="glyphicon glyphicon-trash"></span></a>
+    </td>
+</tr>
+
+{% endfor %}
+</table>
+{% endblock %}
+
+
+                

@@ -1,0 +1,44 @@
+<<<<<<< HEAD
+#footer {
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    /* Height of the footer*/
+    height: 40px;
+    background: grey;
+}
+
+=======
+>>>>>>> antoine
+.child2 {
+    width: 70%;
+    border-left: solid black 1px;
+}
+.bg-green {
+    background-color: rgb(212, 253, 150);
+}
+button, .btn-green {
+    border: solid rgb(212, 253, 150) 2px;
+    border-radius: 5px;
+    background-color: white;
+}
+button:hover, .btn-green:hover {
+    background-color: rgb(212, 253, 150);
+    border-radius: 5px;
+    color: #2b0269;
+    border: solid #2b0269 1px;
+}
+
+@media only screen and (max-width: 768px) {
+    .parent {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .child2 {
+        margin-top: 50px;
+        width: 100%;
+        border-left: 0px;
+    }
+  }

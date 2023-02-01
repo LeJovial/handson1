@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{{ block ("head", "/index.html.twig")}}
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+
+{{ block ("header", "/header.html.twig")}}
+<div class="example-wrapper">
+    <div style="display: flex; justify-content: center"> 
+        <h1>Se connecter:</h1>
+    </div>
+    
+
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    <form action="{{ path('app_login') }}" method="post">
+        
+        <div style="display: flex; justify-content: center">
+            <div class="input-group mb-3" style="width: 350px;">
+                <div class="input-group-prepend">
+                    <span class="input-group-text bg-green" style="padding-right:25px;"id="basic-addon1"><label for="username">Email:</label></span>
+                </div>
+                <input type="text" id="username" name="_username" value="{{ last_username }}" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            </div>  
+        </div>
+        <div style="display: flex; justify-content: center"> 
+            <div class="input-group mb-3" style="width: 350px;">
+                <div class="input-group-prepend">
+                    <span class="input-group-text bg-green" id="basic-addon1"><label for="password">Password:</label></span>
+                </div>
+                <input type="password" id="password" name="_password" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            </div> 
+        </div>
+       
+       <div style="display: flex; justify-content: center; margin-top: 25px;"> 
+            <button class="bg-green" type="submit">Connexion</button>
+            <button class="bg-green" style="margin-left: 25px;"><a href="/register" style="color:black; text-decoration:none">Créer son compte</a></button>
+        </div>
+
+        
+
+        <div style="display: flex; justify-content: center; margin-top: 25px;">
+            
+        </div>
+        
+        <input type="hidden" name="_target_path" value="/main">
+
+        
+        
+    </form>
+
+</div>
+{% endblock %}
