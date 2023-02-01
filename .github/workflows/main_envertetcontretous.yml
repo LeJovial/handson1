@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'envertetcontretous'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_758723AA08B040529A5E52D3F10DFE3D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0CADB9DF966348FAA9111E0486F499EB }}
           package: .
