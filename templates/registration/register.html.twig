@@ -3,10 +3,41 @@
 <title>Register</title>
 {{ block ("head", "/index.html.twig")}}
 
-{{ block ("header", "/user/header.html.twig")}}
+{{ block ("header", "/header.html.twig")}}
 {% block body %}
     <main>
-        <div class="d-flex justify-content-center flex-column align-items-center fs-4 text-center">
+    <div style="display: flex; justify-content: center"> 
+        <h1>S'enregistrer:</h1>
+    </div>
+    <div style="display: flex; justify-content: center">
+            <div class="input-group mb-3" style="width: 350px;">
+                <div class="input-group-prepend">
+                    <span class="input-group-text bg-green" style="padding-right:25px;"id="basic-addon1"><label for="username">Email:</label></span>
+                </div>
+                <input type="text" id="username" name="_username" value="" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            </div>  
+        </div>
+        <div style="display: flex; justify-content: center"> 
+            <div class="input-group mb-3" style="width: 350px;">
+                <div class="input-group-prepend">
+                    <span class="input-group-text bg-green" id="basic-addon1"><label for="password">Mot de passe:</label></span>
+                </div>
+                <input type="password" id="password" name="_password" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            </div> 
+        </div>
+       
+       <div style="display: flex; justify-content: center; margin-top: 25px;"> 
+            <button class="bg-green" style="margin-left: 25px;"><a href="/register" style="color:black; text-decoration:none">Créer son compte</a></button>
+        </div>
+
+        
+
+        <div style="display: flex; justify-content: center; margin-top: 25px;">
+            
+        </div>
+        
+        <input type="hidden" name="_target_path" value="/main">
+       <!-- <div class="d-flex justify-content-center flex-column align-items-center fs-4 text-center">
             <h1 class="my-3">Register</h1>
             {{ form_start(registrationForm) }}
                 {{ form_row(registrationForm.username) }}
@@ -18,6 +49,6 @@
 
                 <button type="submit" class="btn-green my-3">Register</button>
             {{ form_end(registrationForm) }}
-        </div>
+        </div>-->
     </main>
 {% endblock %}

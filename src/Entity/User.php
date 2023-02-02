@@ -6,21 +6,12 @@ use App\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-<<<<<<< HEAD
-=======
-use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
->>>>>>> antoine
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[ORM\Table(name: '`user`')]
-<<<<<<< HEAD
-abstract class User implements UserInterface, PasswordAuthenticatedUserInterface
-=======
-#[UniqueEntity(fields: ['username'], message: 'There is already an account with this username')]
-class User implements UserInterface, PasswordAuthenticatedUserInterface
->>>>>>> antoine
+class User /*implements UserInterface, PasswordAuthenticatedUserInterface*/
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -65,38 +56,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
-<<<<<<< HEAD
-=======
-     * A visual identifier that represents this user.
-     *
-     * @see UserInterface
-     */
-    public function getUserIdentifier(): string
-    {
-        return (string) $this->username;
-    }
-
-    /**
-     * @see UserInterface
-     */
-    public function getRoles(): array
-    {
-        $roles = $this->roles;
-        // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
-
-        return array_unique($roles);
-    }
-
-    public function setRoles(array $roles): self
-    {
-        $this->roles = $roles;
-
-        return $this;
-    }
-
-    /**
->>>>>>> antoine
      * @see PasswordAuthenticatedUserInterface
      */
     public function getPassword(): string

@@ -40,10 +40,7 @@ class Analysis
     #[ORM\Column(length: 255)]
     private ?string $Host = null;
 
-<<<<<<< HEAD
     //getters & setters definition for the Analysis table
-=======
->>>>>>> antoine
     public function getId(): ?int
     {
         return $this->id;
